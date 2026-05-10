@@ -1,0 +1,4 @@
+interface:
+  display_name: "钱学森系统思维"
+  short_description: "用系统工程、总体设计部和综合集成方法指导任意复杂系统的判断与执行"
+  default_prompt: "用钱学森式系统工程和从定性到定量综合集成方法，分析这个复杂系统并给出可执行方案。"
