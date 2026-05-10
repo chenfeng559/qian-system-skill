@@ -1,6 +1,6 @@
 # qian-system-skill
 
-`qian-system-skill` 是一个 Codex Skill，用来把钱学森式系统工程思想应用到复杂问题的分析、决策和执行中。
+`qian-system-skill` 是一个通用 AI Skill，用来把钱学森式系统工程思想应用到复杂问题的分析、决策和执行中。
 
 它不是“角色扮演”或“模仿钱学森说话”。这个 Skill 的目标是把一种可复用的方法论沉淀下来：先判断系统类型，再定义边界和层次；先吸收定性经验，再转化为可验证的变量和模型；通过专家、数据、模型、工具的综合集成来形成方案；最后设计执行组织和反馈修正机制。
 
@@ -52,7 +52,7 @@ qian-system-skill/
 - `references/method-principles.md`：方法论原则，说明如何把任意对象映射成系统，并进行系统分类、综合集成和反馈设计。
 - `references/output-templates.md`：输出模板，包括复杂问题分析、决策备忘录、总体设计部方案、执行计划和复盘模板。
 - `references/case-index.md`：自包含案例库，内置可迁移案例和使用规则，不依赖外部 PDF 或原始材料。
-- `agents/openai.yaml`：Codex Skill 列表中的 UI 元数据。
+- `agents/openai.yaml`：可选 UI 元数据；不参与核心方法，其他 harness 可以忽略或映射为自己的元数据格式。
 
 ## 示例提示词
 
@@ -91,14 +91,14 @@ Skill 通常会把输出组织成：
 
 ## 安装方式
 
-把仓库克隆到 Codex 的 skills 目录：
+把仓库克隆或复制到你的 agent harness 支持的 skills/plugins 目录：
 
 ```bash
-mkdir -p ~/.codex/skills
-git clone https://github.com/chenfeng559/qian-system-skill.git ~/.codex/skills/qian-system-skill
+mkdir -p /path/to/your-harness/skills
+git clone https://github.com/chenfeng559/qian-system-skill.git /path/to/your-harness/skills/qian-system-skill
 ```
 
-然后重启 Codex，或重新加载可用 skills。
+然后按你的 harness 规则重新加载可用 skills，并让它读取 `SKILL.md` 作为入口文件。
 
 ## 设计说明
 
@@ -109,4 +109,3 @@ git clone https://github.com/chenfeng559/qian-system-skill.git ~/.codex/skills/q
 - **模板**：面向执行的输出结构。
 
 这样即使没有原始研究材料，模型也可以直接加载这个 Skill，并用其中的案例和方法指导新的复杂系统问题。
-
