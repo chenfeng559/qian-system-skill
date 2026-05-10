@@ -1,39 +1,39 @@
 # qian-system-skill
 
-`qian-system-skill` is a Codex Skill for applying Qian Xuesen-inspired systems thinking to complex problems.
+`qian-system-skill` 是一个 Codex Skill，用来把钱学森式系统工程思想应用到复杂问题的分析、决策和执行中。
 
-It is not a roleplay persona. It does not try to imitate Qian Xuesen’s identity or claim what he would personally say. Instead, it operationalizes a reusable method: classify the system, define boundaries and layers, move from qualitative judgment to quantitative evidence, synthesize through iteration, design an execution apparatus, and keep feedback loops explicit.
+它不是“角色扮演”或“模仿钱学森说话”。这个 Skill 的目标是把一种可复用的方法论沉淀下来：先判断系统类型，再定义边界和层次；先吸收定性经验，再转化为可验证的变量和模型；通过专家、数据、模型、工具的综合集成来形成方案；最后设计执行组织和反馈修正机制。
 
-## What It Helps With
+## 适用场景
 
-Use this skill when you need to analyze, plan, decide, execute, or review any complex system, including:
+当你需要分析、规划、决策、执行或复盘任何复杂系统时，可以使用这个 Skill，例如：
 
-- company strategy
-- product and platform systems
-- AI agent workflows
-- organizational transformation
-- research programs
-- city, education, health, or policy systems
-- personal operating systems and long-term growth plans
-- any problem where many actors, variables, layers, feedback loops, and external constraints interact
+- 公司战略
+- 产品和平台系统
+- AI Agent 工作流
+- 组织转型
+- 研究项目
+- 城市、教育、医疗、政策系统
+- 个人成长系统和长期行动方案
+- 任何涉及多主体、多变量、多层次、反馈回路和外部约束的问题
 
-## Core Method
+## 核心方法
 
-The skill follows this operating sequence:
+这个 Skill 默认遵循以下工作流：
 
-1. Clarify the mission.
-2. Classify the system.
-3. Define boundaries and layers.
-4. Move from qualitative judgment to quantitative evidence.
-5. Synthesize through expert-data-model-tool iteration.
-6. Design the “overall design department” or equivalent execution apparatus.
-7. Output a phased decision and feedback mechanism.
+1. 明确任务。
+2. 判断系统类型。
+3. 定义系统边界和层次。
+4. 从定性判断走向定量证据。
+5. 通过专家、数据、模型、工具反复综合集成。
+6. 设计“总体设计部”或等价的执行装置。
+7. 输出阶段性决策、执行路径和反馈机制。
 
-The central principle is:
+核心原则是：
 
-> Do not use a simple-system method on an open complex giant system.
+> 不能用简单系统的方法处理开放复杂巨系统。
 
-## Skill Structure
+## 目录结构
 
 ```text
 qian-system-skill/
@@ -46,15 +46,15 @@ qian-system-skill/
     └── output-templates.md
 ```
 
-## Files
+## 文件说明
 
-- `SKILL.md`: the main trigger, workflow, behavioral rules, and reference loading guide.
-- `references/method-principles.md`: generalized method principles for applying systems thinking to any system object.
-- `references/output-templates.md`: reusable templates for analysis, decision memos, execution plans, overall design department plans, and postmortems.
-- `references/case-index.md`: self-contained cases and transfer rules. It does not depend on an external PDF or source document.
-- `agents/openai.yaml`: UI metadata for Codex skill lists.
+- `SKILL.md`：Skill 的主入口，包含触发描述、核心工作流、行为规则和参考文件加载说明。
+- `references/method-principles.md`：方法论原则，说明如何把任意对象映射成系统，并进行系统分类、综合集成和反馈设计。
+- `references/output-templates.md`：输出模板，包括复杂问题分析、决策备忘录、总体设计部方案、执行计划和复盘模板。
+- `references/case-index.md`：自包含案例库，内置可迁移案例和使用规则，不依赖外部 PDF 或原始材料。
+- `agents/openai.yaml`：Codex Skill 列表中的 UI 元数据。
 
-## Example Prompts
+## 示例提示词
 
 ```text
 用钱学森系统工程的方法，分析我们公司的 AI 产品战略。
@@ -72,9 +72,9 @@ qian-system-skill/
 按总体设计部的方式，为这个研究项目设计组织结构、数据系统和反馈机制。
 ```
 
-## Expected Output Style
+## 典型输出结构
 
-The skill usually structures work as:
+Skill 通常会把输出组织成：
 
 1. 问题性质
 2. 系统边界
@@ -87,26 +87,26 @@ The skill usually structures work as:
 9. 推荐路径
 10. 反馈与修正机制
 
-For smaller tasks, the same logic is compressed.
+对于较小的问题，会压缩结构，但保留同样的分析逻辑。
 
-## Installation
+## 安装方式
 
-Clone this repository into your Codex skills directory:
+把仓库克隆到 Codex 的 skills 目录：
 
 ```bash
 mkdir -p ~/.codex/skills
 git clone https://github.com/chenfeng559/qian-system-skill.git ~/.codex/skills/qian-system-skill
 ```
 
-Then restart Codex or reload available skills.
+然后重启 Codex，或重新加载可用 skills。
 
-## Design Notes
+## 设计说明
 
-This skill deliberately separates three things:
+这个 Skill 特意把三类内容分开：
 
-- **Method**: the reusable systems workflow.
-- **Cases**: self-contained examples that teach transfer rules.
-- **Templates**: practical output structures for execution.
+- **方法**：可复用的系统工程工作流。
+- **案例**：自包含的案例和迁移规则。
+- **模板**：面向执行的输出结构。
 
-This keeps the skill usable even when the original research materials are not available.
+这样即使没有原始研究材料，模型也可以直接加载这个 Skill，并用其中的案例和方法指导新的复杂系统问题。
 
